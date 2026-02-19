@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+     
+        }
+
+/* =================== HERO SECTION =================== */
+
+.box1 {
+    width: 100%;
+    min-height: 100vh;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.box2 {
+    width: 100%;
+    min-height: 90vh;
+    background: lightgray;
+    border-bottom-right-radius: 600px;
+    border-top-left-radius: 600px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.box3 {
+    width: 100%;
+    min-height: 80vh;
+    background: white;
+    border-bottom-right-radius: 700px;
+    border-top-left-radius: 700px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
+}
+
+/* Hero Content Layout */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    gap: 40px;
+    position: relative;
+}
+
+/* Left Paint Splash */
+.paint-left {
+    flex: 0 0 250px;
+}
+
+.paint-left .paint-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Center Text */
+.hero-text {
+    flex: 1;
+    text-align: left;
+    z-index: 10;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-text .trusted {
+    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #4169e1, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
+.hero-text .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-text .years {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #4169e1;
+    margin: 0;
+}
+
+.hero-text .years-text {
+    font-size: 3rem;
+    color: #333;
+}
+
+/* Right Side */
+.hero-right {
+    flex: 0 0 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Right Paint Splash */
+.paint-right {
+    position: absolute;
+    top: -80px;
+    right: -20px;
+    z-index: 1;
+}
+
+.paint-right .paint-img {
+    width: 250px;
+    height: auto;
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+/* Printer Container */
+.printer-container {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.printer-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+.carousel-label {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text .years {
+        font-size: 3rem;
+    }
+
+    .paint-left,
+    .hero-right {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .paint-left,
+    .paint-right {
+        display: none;
+    }
+
+    .hero-right {
+        flex: 1;
+    }
+
+    .nav-icons {
+        margin-right: 0;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text .years {
+        font-size: 2.5rem;
+    }
+
+    .printer-img {
+        max-width: 300px;
+    }
+
+    .box2,
+    .box3 {
+        border-radius: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">
+
+                <div class="hero-content">
+                    
+                    <!-- Left Paint Splash -->
+                    <div class="paint-right">
+                        <img src="paint1.png" alt="Paint Splash" class="paint-img">
+                    </div>
+
+                    <!-- Center Text -->
+                    <div class="hero-text">
+                        <h1>YOUR <span class="trusted">TRUSTED</span></h1>
+                        <p class="subtitle">PRINTER AND CARTRIDGES EXPERTS FOR OVER</p>
+                        <h2 class="years">20 <span class="years-text">YEARS</span></h2>
+                    </div>
+
+                    <!-- Right Side: Paint Splash + Printer -->
+                    <div class="hero-right">
+                        <!-- Paint Splash -->
+                        <div class="paint-left">
+                            <img src="paint2.png" alt="Paint Splash" class="paint-img">
+                        </div>
+
+                        <!-- Printer Image -->
+                        <div class="printer-container">
+                            <img src="printer.png" alt="Printer" class="printer-img">
+                            <p class="carousel-label">**CAROUSEL EFFECT**</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>

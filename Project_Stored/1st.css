@@ -2,4 +2,250 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(247, 244, 244) !important;
+    min-width: 100vw;
+    min-height: 100vh; /* this makes the body fill the full screen height */
+    overflow-x: hidden;/* this is for the slide bar width below*/
+
+
+     
+}
+
+/* Navbar */
+.nav-header {
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 30px rgba(7, 7, 7, 0.3);
+    padding: 2rem 2rem;
+    backdrop-filter: blur(10px);  
+}
+
+.nav-header .container-fluid {
+    margin-left: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-logo {  
+    height: 50px;
+    width: auto;
+}
+.navbar-collapse {
+    gap: 1px; /* adjust this value so that the nav-link will get closer to the search bar*/
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-right: 25px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+/* Text color on hover */
+.navbar-nav .nav-link:hover {
+    color: #bcc4d4 !important;
+}
+
+/* Underline ONLY on Home and About Us — NOT Shop */
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgb(107, 105, 105);
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+/* Show underline on hover */
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+    width: 93%;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background: linear-gradient(135deg, #e9e8ee, #dfdfe2);
+    border: 1px solid rgba(13, 13, 14, 0.4);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0, 102, 255, 0.3);
+    min-width: 350px;
+    margin-top: 30px !important;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: rgba(210, 214, 219, 0.3);
+    color: #cec8c6;
+    transform: translateX(5px);
+}
+
+.search-container-4 {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.search-input-4 {
+    border: none;
+    outline: none;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 10px;
+    font-size: 1.05rem;
+    width: 100%;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 30px;
+    
+}
+
+.search-input-4::placeholder {
+    color: gray;
+}
+
+.search-icon-4 {
+    color: gray;
+    font-size: 1.3rem;
+    cursor: pointer;
+    min-width: 20px;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.cart-icon:hover {
+    color: #f0742c;
+    transform: translateY(-2px);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.profile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #cccccc;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #666;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    border-color: #0565da;
+    background: #aaaaaa;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+/* End of navigation CSS */
+
+/* Start for the main body*/
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    display: flex; /* you can just remove this if you want unto align-items as well*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+            
+}
+
+.box2 {
+    width: 100%;
+    height: 100vh;
+    background: lightgray;
+    border-bottom-right-radius: 550px;
+    border-top-left-radius: 550px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+        }
+
+.box3 {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    border-bottom-right-radius: 800px;
+    border-top-left-radius: 800px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.main-content .paint-img {
+   position: absolute;
+   top: 1%;
+   right: 75%;
+   width: 580px;
+   height: 680px;
+
+
+}
+
+
